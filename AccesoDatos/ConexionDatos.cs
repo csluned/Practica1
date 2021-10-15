@@ -75,7 +75,12 @@ namespace AccesoDatos
             return true;
         }
 
+        public static Profesores[] getProfesores() {
 
+            return dataDocentes;
+
+
+        }
 
 
 

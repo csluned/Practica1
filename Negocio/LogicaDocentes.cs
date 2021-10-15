@@ -19,5 +19,11 @@ namespace Negocio
             return 0; // Hace referencia a la regla que los datos estan correctos
 
         }
+
+
+        public static Profesores[] GetProfesores() {
+            return ConexionDatos.getProfesores();
+        }
+
     }
 }
