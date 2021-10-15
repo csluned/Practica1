@@ -13,8 +13,6 @@ namespace Entidades
         public string PrimerAp { get; set; }
         public string SegundoAp { get; set; }
 
-        // Universidades hacer referencia a Sedes
-        public Universidades[] Sedes { get; set; }
 
 
     }

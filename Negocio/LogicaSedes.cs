@@ -41,6 +41,25 @@ namespace Negocio
         
         }
 
+        public static bool ComprobarSede() {
+
+            Universidades[] tempSede = ConexionDatos.getSede();
+
+            if (tempSede.Count(x => x != null) == 0) {
+                return true;
+            }
+
+            return false;
+
+        }
+
+
+        public static Universidades[] getSedes() {
+            return ConexionDatos.getSede();
+        }
+
+
+
 
 
     }

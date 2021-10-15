@@ -9,7 +9,10 @@ namespace AccesoDatos
 {
     public class ConexionDatos
     {
+        // Primeros Niveles 
         private static Universidades[] dataSedes = new Universidades[20];
+        private static Profesores[] dataDocentes = new Profesores[20];
+
         private static int index1 = 0;
 
         public static bool GuardarSede(Universidades sede) {
@@ -57,9 +60,22 @@ namespace AccesoDatos
 
          public static int cantidad()
         {
-
             return index1 + 1;
         }
+
+        // Retorna los datos a la capa de Negocio y posterior a la presentacion 
+        public static Universidades[] getSede() {
+
+            return dataSedes;
+        }
+
+        public static bool GuardarDocente(Profesores docente)
+        {
+            dataDocentes[dataDocentes.Count(x => x != null)] = docente;
+            return true;
+        }
+
+
 
 
 

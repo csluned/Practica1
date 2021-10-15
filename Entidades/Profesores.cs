@@ -14,7 +14,24 @@ namespace Entidades
         public string Usuario { get; set; }
         //contraseña
         public string Password { get; set; }
+
+
+        // Universidades hacer referencia a Sedes
+        public Universidades[] listaSede { get; set; }
+
+        public Profesores()
+        {
+            IdProfesor = 0;
+            Sueldo =0.0;
+            Usuario = string.Empty;
+            Password = string.Empty;
+            listaSede = new Universidades[5];
+        }
+
+
     }
+
+
 
 
 }

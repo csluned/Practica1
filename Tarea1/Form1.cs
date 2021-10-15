@@ -1,4 +1,6 @@
 ﻿using System;
+using Entidades;
+using Negocio;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,8 +29,20 @@ namespace Tarea1
 
         private void openFrmDocente(object sender, EventArgs e)
         {
-            FormRegistrarD frD = new FormRegistrarD();
-            frD.ShowDialog();
+
+            if (LogicaSedes.ComprobarSede()) // si no hay sedes
+            {
+
+                MessageBox.Show("Debe ingresar Sedes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else { // si hay sedes
+                FormRegistrarD frD = new FormRegistrarD();
+                frD.ShowDialog();
+            }
+
+
+
+
 
         }
     }

@@ -32,16 +32,16 @@ namespace Tarea1
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.docentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.docentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matricularCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,13 @@ namespace Tarea1
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::Tarea1.Properties.Resources.Exit;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
             // sedesToolStripMenuItem
             // 
             this.sedesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -91,25 +98,6 @@ namespace Tarea1
             this.sedesToolStripMenuItem.Name = "sedesToolStripMenuItem";
             this.sedesToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sedesToolStripMenuItem.Text = "Sedes";
-            // 
-            // docentesToolStripMenuItem
-            // 
-            this.docentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarDocentesToolStripMenuItem,
-            this.asignarCursosToolStripMenuItem});
-            this.docentesToolStripMenuItem.Name = "docentesToolStripMenuItem";
-            this.docentesToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.docentesToolStripMenuItem.Text = "Docentes";
-            this.docentesToolStripMenuItem.Click += new System.EventHandler(this.openFrmDocente);
-            // 
-            // estudiantesToolStripMenuItem
-            // 
-            this.estudiantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarEstudianteToolStripMenuItem,
-            this.matricularCursosToolStripMenuItem});
-            this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             // 
             // agregarSedesToolStripMenuItem
             // 
@@ -124,11 +112,38 @@ namespace Tarea1
             this.agregarCursosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.agregarCursosToolStripMenuItem.Text = "Agregar Cursos";
             // 
+            // docentesToolStripMenuItem
+            // 
+            this.docentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarDocentesToolStripMenuItem,
+            this.asignarCursosToolStripMenuItem});
+            this.docentesToolStripMenuItem.Name = "docentesToolStripMenuItem";
+            this.docentesToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.docentesToolStripMenuItem.Text = "Docentes";
+            // 
+            // registrarDocentesToolStripMenuItem
+            // 
+            this.registrarDocentesToolStripMenuItem.Image = global::Tarea1.Properties.Resources.profesor;
+            this.registrarDocentesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.registrarDocentesToolStripMenuItem.Name = "registrarDocentesToolStripMenuItem";
+            this.registrarDocentesToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.registrarDocentesToolStripMenuItem.Text = "Registrar Docentes";
+            this.registrarDocentesToolStripMenuItem.Click += new System.EventHandler(this.openFrmDocente);
+            // 
             // asignarCursosToolStripMenuItem
             // 
             this.asignarCursosToolStripMenuItem.Name = "asignarCursosToolStripMenuItem";
             this.asignarCursosToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
             this.asignarCursosToolStripMenuItem.Text = "Asignar Cursos";
+            // 
+            // estudiantesToolStripMenuItem
+            // 
+            this.estudiantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarEstudianteToolStripMenuItem,
+            this.matricularCursosToolStripMenuItem});
+            this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             // 
             // registrarEstudianteToolStripMenuItem
             // 
@@ -141,21 +156,6 @@ namespace Tarea1
             this.matricularCursosToolStripMenuItem.Name = "matricularCursosToolStripMenuItem";
             this.matricularCursosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.matricularCursosToolStripMenuItem.Text = "Matricular Cursos";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Image = global::Tarea1.Properties.Resources.Exit;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // registrarDocentesToolStripMenuItem
-            // 
-            this.registrarDocentesToolStripMenuItem.Image = global::Tarea1.Properties.Resources.profesor;
-            this.registrarDocentesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.registrarDocentesToolStripMenuItem.Name = "registrarDocentesToolStripMenuItem";
-            this.registrarDocentesToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.registrarDocentesToolStripMenuItem.Text = "Registrar Docentes";
             // 
             // Form1
             // 

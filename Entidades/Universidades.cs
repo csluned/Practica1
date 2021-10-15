@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    // Clase de objeto Sede
     public class Universidades
     {
         public int IdSede { get; set; }
